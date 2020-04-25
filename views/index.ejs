@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+
+<body>
+
+    <div id="app" class="main">
+
+        <div class="head-container">
+            <h1>World Room</h1>
+        </div>
+
+        <div v-show="isChatUser" class="enter-user">
+            <form>
+                <div class="form-control">
+                    <input type="text" ref="userinput" v-model="getUsername" name="username" id="username"
+                        placeholder="Enter username" required />
+                </div>
+                <button v-on:click.prevent="joinChat">
+                    Join Chat
+                </button>
+            </form>
+
+            <div v-show="isChatUser" class="choose-room">
+
+                <p>Choose a Room: {{ getRoom }}</p>
+
+                <div class="room-list">
+                    <ul v-for="countries in countryList">
+                        <li v-on:click="initRoom(countries)">
+                            {{ countries }}
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div v-show="isChat" class="chat-room">
+
+            <div class="chat-messages">
+                <div class="room-name">
+                    <h2>{{roomName}}</h2>
+                    <p v-on:click="closeChat">X</p>
+                </div>
+
+                <div class="message" ref="messageArea">
+                    <ul v-for="message in messages">
+                        <li>
+                            <p class="m-time">
+                                {{ message.time }}
+                            </p>
+                            <div>
+                                <p class="m-username">
+                                    {{ message.username }}
+                                </p>
+                                <p class="m-message">
+                                    {{ message.message }}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chat-form-container">
+                    <form>
+                        <input type="text" v-model="chatMessage" placeholder="Enter Message" ref="messageInput">
+                        <button v-on:click.prevent="sendMessage">
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

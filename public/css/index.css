@@ -1,0 +1,414 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #303030;
+  margin: 0;
+  padding: 0;
+}
+
+* ::-webkit-scrollbar {
+  width: 10px;
+}
+
+* ::-webkit-scrollbar-track {
+  background-color: #222829;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background-color: #c4c4c4;
+}
+
+.main {
+  margin: 0rem;
+  padding: 0rem;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #dcffd9, #d2f7e9, #d4f4fa, #d2d5fa);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+}
+
+@media (max-width: 600px) {
+  .main {
+    height: 100vh;
+  }
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main .head-container {
+  padding: 1rem;
+}
+
+.main .enter-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .main .enter-user {
+    margin-top: 0.5rem;
+  }
+}
+
+.main .enter-user form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .main .enter-user form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.main .enter-user form div {
+  margin-right: 2rem;
+}
+
+@media (max-width: 600px) {
+  .main .enter-user form div {
+    margin-right: 0;
+    margin: 0.5rem;
+  }
+}
+
+.main .enter-user form div input {
+  padding: 1rem;
+  border: none;
+  font-size: 1.5rem;
+  outline: none;
+  background-color: #cbd7d7;
+}
+
+@media (max-width: 600px) {
+  .main .enter-user form div input {
+    font-size: 1rem;
+  }
+}
+
+.main .enter-user form button {
+  margin-left: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #00bbc4;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .main .enter-user form button {
+    margin-left: 0;
+    margin: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    text-align: center;
+  }
+}
+
+.main .enter-user form button:hover {
+  background-color: #00ecf7;
+  color: #202020;
+}
+
+.main .enter-user .choose-room {
+  background-color: #eddcb2;
+  -webkit-box-shadow: 0rem 0rem 1rem 0.05rem #d0d0d0;
+          box-shadow: 0rem 0rem 1rem 0.05rem #d0d0d0;
+  margin: 1rem;
+}
+
+.main .enter-user .choose-room ::-webkit-scrollbar-thumb {
+  background-color: #4f270e;
+}
+
+.main .enter-user .choose-room ::-webkit-scrollbar-thumb:hover {
+  background-color: #7a3c16;
+}
+
+@media (max-width: 600px) {
+  .main .enter-user .choose-room {
+    width: 90%;
+    height: 70%;
+    margin: 0.5rem;
+  }
+}
+
+.main .enter-user .choose-room p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .main .enter-user .choose-room p {
+    font-size: 0.8rem;
+  }
+}
+
+.main .enter-user .choose-room .room-list {
+  background-color: #b3594f;
+  height: 50vh;
+  overflow-y: auto;
+  margin: 2rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border: solid #6d352f 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .main .enter-user .choose-room .room-list {
+    height: 40vh;
+  }
+}
+
+.main .enter-user .choose-room .room-list ul {
+  text-align: left;
+}
+
+.main .enter-user .choose-room .room-list ul li {
+  list-style-type: none;
+  border-bottom: solid #91473e 0.2rem;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .main .enter-user .choose-room .room-list ul li {
+    font-size: 0.8rem;
+  }
+}
+
+.main .enter-user .choose-room .room-list ul li:hover {
+  background-color: #91473e;
+  cursor: pointer;
+}
+
+.main .chat-room {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.main .chat-room .chat-messages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .main .chat-room .chat-messages {
+    width: 90%;
+  }
+}
+
+.main .chat-room .chat-messages .room-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem;
+  background-color: #2a2e37;
+  -webkit-box-shadow: 0rem 0rem 1rem 0.05rem #d0d0d0;
+          box-shadow: 0rem 0rem 1rem 0.05rem #d0d0d0;
+}
+
+@media (max-width: 600px) {
+  .main .chat-room .chat-messages .room-name {
+    font-size: 0.7rem;
+  }
+}
+
+.main .chat-room .chat-messages .room-name h2 {
+  color: #fff;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.main .chat-room .chat-messages .room-name p {
+  color: #fff;
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: #aaa;
+  border-radius: 1rem;
+}
+
+.main .chat-room .chat-messages .room-name p:hover {
+  background-color: #919191;
+  cursor: pointer;
+}
+
+.main .chat-room .chat-messages .message {
+  height: 65vh;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  text-align: left;
+}
+
+.main .chat-room .chat-messages .message ul {
+  margin: 1rem;
+}
+
+.main .chat-room .chat-messages .message ul li {
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+.main .chat-room .chat-messages .message ul li .m-time {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.main .chat-room .chat-messages .message ul li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .chat-room .chat-messages .message ul li div .m-username {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+.main .chat-room .chat-messages .message ul li div .m-message {
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: #d2d5fa;
+  border-radius: 1rem;
+}
+
+.main .chat-room .chat-messages .chat-form-container {
+  background-color: #aaa;
+  -webkit-box-shadow: 0rem -0.5rem 3rem -0.1rem #dddddd;
+          box-shadow: 0rem -0.5rem 3rem -0.1rem #dddddd;
+  margin: 0;
+  padding: 0;
+  height: 5vh;
+}
+
+.main .chat-room .chat-messages .chat-form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .chat-room .chat-messages .chat-form-container form input {
+  font-size: 1rem;
+  width: 80%;
+  outline: none;
+  padding: 1rem;
+  border: none;
+}
+
+.main .chat-room .chat-messages .chat-form-container form button {
+  font-size: 1.2 rem;
+  text-align: center;
+  background-color: #0e2a4f;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  width: 20%;
+}
+
+.main .chat-room .chat-messages .chat-form-container form button:hover {
+  background-color: #16417a;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .main .chat-room .chat-messages .chat-form-container form button {
+    width: 20%;
+  }
+}
+
+.main .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.main .footer p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #222829;
+}
+/*# sourceMappingURL=index.css.map */
