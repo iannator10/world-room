@@ -12,6 +12,11 @@ const io = socketio(server)
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs')
 
+io.configure(function () {
+    io.set("transports", ["xhr-polling"]);
+    io.set("polling duration", 10);
+});
+
 const bot = 'Admin';
 
 //runn when a client connects
@@ -69,8 +74,8 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-const port = 3000 || process.env.PORT
+const PORT = process.env.PORT || 3000;
 
-server.listen(port, () => {
-    console.log(`listening on port ${port}`)
+server.listen(PORT, () => {
+    console.log(`listening on port ${PORT}`)
 });
