@@ -1,21 +1,16 @@
 const express = require('express');
 const path = require('path');
 const http = require('http');
-const socketio = require('socket.io');
+const socketIO = require('socket.io');
 const formatMessage = require('./utils/messages.js')
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users.js')
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server)
+const io = socketIO(server)
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs')
-
-io.configure(function () {
-    io.set("transports", ["xhr-polling"]);
-    io.set("polling duration", 10);
-});
 
 const bot = 'Admin';
 
